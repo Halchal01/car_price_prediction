@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car Price Prediction</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/38817014-a367-493f-8db4-476033f8ee91/Prince%20logo.png?v=1718044304361">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="https://cdn.glitch.global/38817014-a367-493f-8db4-476033f8ee91/Prince%20logo.png?v=1718044304361" alt="Logo" style="width: 40px" class="rounded-pill"/>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="https://halchal01.glitch.me/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="https://prince-gallary.glitch.me/">Gallery</a></li>
+            <li class="active"><a href="https://project-page-prince.glitch.me/">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="mx-auto d-block" src="https://cdn.glitch.global/6717e50b-5a85-4c9c-acf2-dbb33679d2cd/imresizer-1719384763272.jpg?v=1719384957194" alt="Setosa" height="600">
+        </div>
+        <div class="item">
+          <img class="mx-auto d-block" src="https://cdn.glitch.global/6717e50b-5a85-4c9c-acf2-dbb33679d2cd/car4.jpg?v=1719384959736" alt="Versicolor" height="600">
+        </div>
+        <div class="item">
+          <img class="mx-auto d-block" src="https://cdn.glitch.global/6717e50b-5a85-4c9c-acf2-dbb33679d2cd/car3.jpg?v=1719384967056" alt="Virginica" height="600">
+        </div>
+        <div class="item">
+          <img class="mx-auto d-block" src="https://cdn.glitch.global/6717e50b-5a85-4c9c-acf2-dbb33679d2cd/car2.jpg?v=1719384970611" alt="Virginica" height="600">
+        </div>
+        <div class="item">
+          <img class="mx-auto d-block" src="https://cdn.glitch.global/6717e50b-5a85-4c9c-acf2-dbb33679d2cd/car1.jpg?v=1719384974050" alt="Virginica" height="600">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="jumbotron text-center">
+      <h1>Car Price Predictor</h1>
+      <p>A Machine Learning Project by <a href="https://halchal01.glitch.me/">@Prince</a></p> 
+    </div>
+
+    <div class="container-fluid" align="center">
+      <h2>Enter Car Details:</h2>
+      <form id="optionForm" action="/rec" method="POST">
+        <div class="row">
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="l">Levy:</label>
+          <input type="number" class="form-control" id="l" name="l" placeholder="4000">
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="m">Manufacturer:</label>
+          <select class="form-control" id="m" name="m">
+            <!-- List of manufacturers -->
+              <option value="LEXUS">LEXUS</option>
+              <option value="CHEVROLET">CHEVROLET</option>
+              <option value="HONDA">HONDA</option>
+              <option value="FORD">FORD</option>
+              <option value="HYUNDAI">HYUNDAI</option>
+              <option value="TOYOTA">TOYOTA</option>
+              <option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+              <option value="OPEL">OPEL</option>
+              <option value="PORSCHE">PORSCHE</option>
+              <option value="BMW">BMW</option>
+              <option value="JEEP">JEEP</option>
+              <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+              <option value="AUDI">AUDI</option>
+              <option value="RENAULT">RENAULT</option>
+              <option value="NISSAN">NISSAN</option>
+              <option value="SUBARU">SUBARU</option>
+              <option value="DAEWOO">DAEWOO</option>
+              <option value="KIA">KIA</option>
+              <option value="MITSUBISHI">MITSUBISHI</option>
+              <option value="SSANGYONG">SSANGYONG</option>
+              <option value="MAZDA">MAZDA</option>
+              <option value="GMC">GMC</option>
+              <option value="FIAT">FIAT</option>
+              <option value="INFINITI">INFINITI</option>
+              <option value="ALFA ROMEO">ALFA ROMEO</option>
+              <option value="SUZUKI">SUZUKI</option>
+              <option value="ACURA">ACURA</option>
+              <option value="LINCOLN">LINCOLN</option>
+              <option value="VAZ">VAZ</option>
+              <option value="GAZ">GAZ</option>
+              <option value="CITROEN">CITROEN</option>
+              <option value="LAND ROVER">LAND ROVER</option>
+              <option value="MINI">MINI</option>
+              <option value="DODGE">DODGE</option>
+              <option value="CHRYSLER">CHRYSLER</option>
+              <option value="JAGUAR">JAGUAR</option>
+              <option value="ISUZU">ISUZU</option>
+              <option value="SKODA">SKODA</option>
+              <option value="DAIHATSU">DAIHATSU</option>
+              <option value="BUICK">BUICK</option>
+              <option value="TESLA">TESLA</option>
+              <option value="CADILLAC">CADILLAC</option>
+              <option value="PEUGEOT">PEUGEOT</option>
+              <option value="BENTLEY">BENTLEY</option>
+              <option value="VOLVO">VOLVO</option>
+              <option value="სხვა">სხვა</option>
+              <option value="HAVAL">HAVAL</option>
+              <option value="HUMMER">HUMMER</option>
+              <option value="SCION">SCION</option>
+              <option value="UAZUAZ">UAZ</option>
+              <option value="MERCURY">MERCURY</option>
+              <option value="ZAZ">ZAZ</option>
+              <option value="ROVER">ROVER</option>
+              <option value="SEAT">SEAT</option>
+              <option value="LANCIA">LANCIA</option>
+              <option value="MOSKVICH">MOSKVICH</option>
+              <option value="MASERATI">MASERATI</option>
+              <option value="FERRARI">FERRARI</option>
+              <option value="SAAB">SAAB</option>
+              <option value="LAMBORGHINI">LAMBORGHINI</option>
+              <option value="ROLLS-ROYCE">ROLLS-ROYCE</option>
+              <option value="PONTIAC">PONTIAC</option>
+              <option value="SATURN">SATURN</option>
+              <option value="ASTON MARTIN">ASTON MARTIN</option>
+              <option value="GREATWALL">GREATWALL</option>
+          </select>
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="p">Production Year:</label>
+          <input type="number" class="form-control" id="p" name="p" placeholder="2015">
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="c">Category:</label>
+          <select class="form-control" id="c" name="c">
+            <!-- List of categories -->
+              <option value="Jeep">Jeep</option>
+              <option value="Hatchback">Hatchback</option>
+              <option value="Sedan">Sedan</option>
+              <option value="Microbus">Microbus</option>
+              <option value="Goods wagon">Goods wagon</option>
+              <option value="Universal">Universal</option>
+              <option value="Coupe">Coupe</option>  
+              <option value="Minivan">Minivan</option>  
+              <option value="Cabriolet">Cabriolet</option>  
+              <option value="Limousine">Limousine</option>  
+              <option value="Pickup">Pickup</option>  
+           </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="ll">Leather Interior:</label>
+          <select class="form-control" id="ll" name="ll">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option> 
+          </select>
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="f">Fuel Type:</label>
+          <select class="form-control" id="f" name="f">
+            <!-- List of fuel types -->
+              <option value="Hybrid">Hybrid</option>
+              <option value="Petrol">Petrol</option>
+              <option value="Diesel">Diesel</option>
+              <option value="CNG">CNG</option>
+              <option value="Plug-in Hybrid">Plug-in Hybrid</option>
+              <option value="LPG">LPG</option>
+              <option value="Hydrogen">Hydrogen</option> 
+          </select>
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="e">Engine Volume(In gallons):</label>
+          <input type="number" class="form-control" id="e" name="e" placeholder="3">
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="mi">Mileage:</label>
+          <input type="number" class="form-control" id="mi" name="mi" placeholder="200000">
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="cy">Cylinders:</label>
+          <input type="number" class="form-control" id="cy" name="cy" placeholder="4">
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="gb">Gear Box Type:</label>
+          <select class="form-control" id="gb" name="gb">
+            <!-- List of gear box types -->
+              <option value="Automatic">Automatic</option>
+              <option value="Tiptronic">Tiptronic</option>
+              <option value="Variator">Variator</option>
+              <option value="Manual">Manual</option>
+          </select>
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="di">Drive Wheels:</label>
+          <select class="form-control" id="di" name="di">
+            <!-- List of drive wheels -->
+              <option value="4x4">4x4</option>
+              <option value="Front">Front</option>
+              <option value="Rear">Rear</option>
+            
+          </select>
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="do">Doors:</label>
+          <input type="number" class="form-control" id="do" name="do" placeholder="4">
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="w">Wheel:</label>
+          <select class="form-control" id="w" name="w">
+            <!-- List of wheels -->
+              <option value="Left wheel">Left wheel</option>
+              <option value="Right-hand drive">Right-hand drive</option>
+          </select>
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="co">Color:</label>
+          <select class="form-control" id="co" name="co">
+            <!-- List of colors -->
+              <option value="Silver">Silver</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Grey">Grey</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
+              <option value="Red">Red</option>
+              <option value="Sky blue">Sky blue</option>
+              <option value="Orange">Orange</option>
+              <option value="Yellow">Yellow</option>
+              <option value="Brown">Brown</option>
+              <option value="Golden">Golden</option>
+              <option value="Beige">Beige</option>
+              <option value="Carnelian red">Carnelian red</option>
+              <option value="Purple">Purple</option>
+              <option value="Pink">Pink</option>
+          </select>
+        </div>
+          </div>
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="a">Number of Airbags:</label>
+          <input type="number" class="form-control" id="a" name="a" placeholder="10">
+        </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict Price</button>
+      </form>
+       {% if prediction %}
+            <div class="alert alert-success" role="alert">
+                The predicted car price is(In US$): {{ prediction }}
+            </div>
+            {% endif %}
+    </div>
+  </body>
+</html>
